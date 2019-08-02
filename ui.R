@@ -12,7 +12,10 @@ ui <- dashboardPage(skin = "black",
                     #sidebar ----
                      dashboardSidebar(
                       width = 150,
-                      sidebarMenu(
+                      sidebarMenu(id = "tabs",
+                        menuItem("PubMed", tabName = "pubmed", icon = icon("searchengin")),
+                        menuItem("Apps", tabName = "apps", icon = icon("calculator")),
+                        hr(style = "border-color:#fff;margin-left:10px;"),
                         div(
                             shinyWidgets::radioGroupButtons(inputId = "select_journal",
                                                             label = NULL,
@@ -38,13 +41,24 @@ ui <- dashboardPage(skin = "black",
                                           href = "bootswatch_spine.css"
                                           )
                       ),
-                      div(style = "display:block;overflow:auto;margin-top:75px;",
-                          column(width = 12,
-                                 fluidRow(
-                                   style = "padding-left: 5px; padding-right: 5px; text-align: justify;",
-                                   shiny::uiOutput("pubmed")
-                                 ) #end fluidRow
-                          ) #end column
-                      ) #end div
+                      tabItems(
+                        tabItem(tabName = "pubmed",
+                                div(style = "display:block;overflow:auto;",
+                                    column(width = 12,
+                                           fluidRow(
+                                             style = "padding-left: 5px; padding-right: 5px; text-align: justify; font-size: 1.3rem;",
+                                             shiny::uiOutput("pubmed")
+                                           ) #end fluidRow
+                                    ) #end column
+                                ) #end div
+                        ), #end pubmed tabName
+                        tabItem(tabName = "apps",
+                                column(width = 12,
+                                       fluidRow(
+                                         shiny::uiOutput("apps")
+                                       ) #end fluidrow
+                                ) #end column
+                        ) #end apps tabName
+                      ) #end tabItems
                     ) #end dashboardBody
 ) #end ui

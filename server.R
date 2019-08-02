@@ -2,6 +2,8 @@ library(shinyjs)
 
 source("./www/pubmed_api.R")
 
+apps_list <- read.csv("./www/apps_list.csv", stringsAsFactors = FALSE)
+
 server <- function(input, output, session) {
   
   #Observers----
@@ -9,9 +11,15 @@ server <- function(input, output, session) {
     shinyjs::runjs("window.scrollTo(0, 0)")
   })
   
-  #UI elements----
-  output$journal <- renderUI({input$select_journal})
+  observeEvent(input$tabs, {
+    if (input$tabs == "pubmed" ){
+      shinyjs::show(id = "select_journal")
+    } else {
+      shinyjs::hide(id = "select_journal")
+    }
+  })
   
+  #UI elements----
   output$pubmed <- renderUI({
     # results = pubmed_by_journal(n.days = 45, search.term = "Global Spine J", limit=10)
     if (input$select_journal == "Global Spine J") {
@@ -41,5 +49,13 @@ server <- function(input, output, session) {
       return(HTML(paste(article_list, collapse = "<hr>")))
     }
     })
+  
+  output$apps <- renderUI({
+    list = paste0("<li><a href='", apps_list$Link, "' target='_blank'>",
+                  apps_list$Title, "(added ", apps_list$Added, ")" ,"</a></li>")
+    list = paste(list, collapse = "")
+    return(HTML(paste0("<ul>", list, "</ul>")))
+    
+  })
   
 } #end server

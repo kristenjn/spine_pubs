@@ -3,4 +3,5 @@
 .RData
 .Ruserdata
 .spine_pubs.dcf
+app.R
 config.yml

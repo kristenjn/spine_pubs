@@ -6,12 +6,12 @@ library(shinyjs)
 
 ui <- dashboardPage(skin = "black",
                     
-                    dashboardHeader(titleWidth = 150,
+                    dashboardHeader(titleWidth = 200,
                                     title = "Spine Pubs"
                                     ),
                     #sidebar ----
                      dashboardSidebar(
-                      width = 150,
+                      width = 200,
                       sidebarMenu(id = "tabs",
                         menuItem("PubMed", tabName = "pubmed", icon = icon("searchengin")),
                         menuItem("Apps", tabName = "apps", icon = icon("calculator")),
@@ -20,11 +20,21 @@ ui <- dashboardPage(skin = "black",
                             shinyWidgets::radioGroupButtons(inputId = "select_journal",
                                                             label = NULL,
                                                             width = NULL,
-                                                            choices = c("Clin Spine Surg",
+                                                            choices = c("Bone Joint J",
+                                                                        "Clin Orthop Relat Res",
+                                                                        "Clin Spine Surg",
                                                                         "Eur Spine J",
                                                                         "Global Spine J",
+                                                                        "J Am Acad Orthop Surg",
+                                                                        "J Bone Joint Surg Am",
                                                                         "J Neurosurg",
                                                                         "J Neurosurg Spine",
+                                                                        "J Neurotrauma",
+                                                                        "J Orthop Res",
+                                                                        "J Orthop Surg Res",
+                                                                        "J Orthop Trauma",
+                                                                        "JBJS Rev",
+                                                                        "Neurosurgery",
                                                                         "Spine",
                                                                         "Spine J"
                                                                         ),

@@ -1,9 +1,14 @@
 Title,Link,Added
-Predicting prolonged postoperative opioid prescription in patients undergoing surgery for lumbar disc herniation,https://sorg-apps.shinyapps.io/lumbardiscopioid/,Aug-19
-SORG,https://www.sorg-ai.com/spine,Aug-19
-Spine Lumbar Fusion Outcomes Calculator,https://becertain.shinyapps.io/lumbar_fusion_calculator/,Aug-19
-Back Treatment Outcomes Calculator (Dartmouth),http://spinesurgerycalc.dartmouth.edu/calc/,Aug-19
-"Dynamic Nomogram for Prediction of Outcome after Lumbar Spinal Fusion/Arthroplasty: Denmark (DaneSpine), Norway (NORspine), and Sweden (Swespine)",https://dynamisknomogramse.shinyapps.io/dynnomapp/,Aug-19
-SpineSage: a next-generation tool for assessing the expected complication rates from spine surgery (University of Washington),http://depts.washington.edu/spinersk/,Aug-19
-American College of Surgeons NSQIP Surgical Risk Calculator,https://riskcalculator.facs.org/RiskCalculator/,Aug-19
-Risk Assessment Tool for Spine Surgery Procedures (iPhone app),https://apps.apple.com/app/ratool/id1087663216,Aug-19
+SORG,https://www.sorg-ai.com/spine,19-Aug
+Spine Lumbar Fusion Outcomes Calculator,https://becertain.shinyapps.io/lumbar_fusion_calculator/,19-Aug
+Back Treatment Outcomes Calculator (Dartmouth),http://spinesurgerycalc.dartmouth.edu/calc/,19-Aug
+"Dynamic Nomogram for Prediction of Outcome after Lumbar Spinal Fusion/Arthroplasty: Denmark (DaneSpine), Norway (NORspine), and Sweden (Swespine)",https://dynamisknomogramse.shinyapps.io/dynnomapp/,19-Aug
+SpineSage: a next-generation tool for assessing the expected complication rates from spine surgery (University of Washington),http://depts.washington.edu/spinersk/,19-Aug
+American College of Surgeons NSQIP Surgical Risk Calculator,https://riskcalculator.facs.org/RiskCalculator/,19-Aug
+Risk Assessment Tool for Spine Surgery Procedures (iPhone app),https://apps.apple.com/app/ratool/id1087663216,19-Aug
+PRO Calculators,https://www.orthotoolkit.com/,19-Aug
+Glioblastoma Survival Calculator,https://cnoc-bwh.shinyapps.io/gbmsurvivalpredictor/,19-Oct
+Predicting prolonged postoperative opioid prescription in patients undergoing surgery for lumbar disc herniation,https://sorg-apps.shinyapps.io/lumbardiscopioid/,19-Nov
+Predicting survival of patients with spinal metastatic disease,https://sorg-apps.shinyapps.io/spinemetssurvival/,19-Nov
+Predicting discharge disposition of patients undergoing elective inpatient surgery for lumbar disc disease,https://sorg-apps.shinyapps.io/discdisposition/,19-Nov
+Resource utilization following lumbar spinal fusion (https://doi.org/10.1016/j.spinee.2019.10.007),https://jaretkarnuta.shinyapps.io/naivebayesfusion/,19-Nov

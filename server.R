@@ -1,11 +1,11 @@
 library(shinyjs)
+library(config)
 
-source("./www/pubmed_api.R")
+source("./www/pubmed_api_function.R")
 
 apps_list <- read.csv("./www/apps_list.csv", stringsAsFactors = FALSE)
 
 server <- function(input, output, session) {
-  
   #Observers----
   observeEvent(input$select_journal, {
     shinyjs::runjs("window.scrollTo(0, 0)")
@@ -30,7 +30,8 @@ server <- function(input, output, session) {
     results = pubmed_by_journal(n.days = 120, 
                                 search.term = input$select_journal,
                                 db = database,
-                                limit=50)
+                                limit=100,
+                                api_key = config::get("pubmed_api"))
     if (is.null(results)) {
       return("No results for selected journal")
     } else {
